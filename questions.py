@@ -23,8 +23,8 @@ answers = [
 ]
 # Índice de la respuesta correcta para cada pregunta, el el mismo orden que las preguntas
 correct_answers_index = [1, 2, 0, 3, 1]
-# Selecciona las 3 preguntas
-selected_questions = random.choices(list(zip(questions,answers,correct_answers_index)), k=3)
+# Selecciona las 3 preguntas y se agregan en una lista de tuplas
+selected_questions = random.sample(list(zip(questions,answers,correct_answers_index)), k=3)
 score = 0
 # El usuario deberá contestar 3 preguntas
 for asked_question, answer_list, correct_answer in selected_questions:
